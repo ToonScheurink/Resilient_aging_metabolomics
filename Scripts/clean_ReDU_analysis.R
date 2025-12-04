@@ -53,7 +53,7 @@ df_clean <- df %>%
     !str_detect(HealthStatus, "healthy")
   ) %>%
   group_by(Scan) %>%
-  filter(n_distinct(USI) >= 2) %>%   # Keep only scans with ≥3 unique USIs
+  filter(n_distinct(USI) >= 2) %>%   # Keep only scans with ≥2 unique USIs
   ungroup() %>%
   dplyr::select(
     USI, Scan, Cosine, ATTRIBUTE_DatasetAccession, DOIDCommonName,
@@ -267,7 +267,7 @@ df_bodypart <- df %>%
   filter(
     str_detect(NCBITaxonomy, "9606|Homo sapiens")) %>%
   group_by(Scan) %>%
-  filter(n_distinct(USI) >= 2) %>%   # Keep only scans with ≥3 unique USIs
+  filter(n_distinct(USI) >= 2) %>%   # Keep only scans with ≥2 unique USIs
   ungroup() %>%
   select(
     USI, Scan, Cosine, ATTRIBUTE_DatasetAccession, DOIDCommonName,
