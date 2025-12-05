@@ -309,7 +309,7 @@ stats_text <- sprintf(
   pct_over70
 )
 
-hexplot_with_stats <- ggplot(df_final, aes(x = Weight, y = Stability)) +
+hexplot_with_stats <- ggplot(df_loadings_full, aes(x = Weight, y = Stability)) +
   geom_hex(binwidth = c(0.007, 0.09)) +
   scale_fill_viridis(
     option = "magma", trans = "log",
@@ -598,7 +598,7 @@ feature_stability_ext <- ggplot(weights_df, aes(x = abs_train, fill = missing_in
     aes(y = ..density..),
     color = "black",
     fill = NA,
-    size = 1.3
+    size = 0.8
   ) +
   scale_fill_manual(
     values = c(
