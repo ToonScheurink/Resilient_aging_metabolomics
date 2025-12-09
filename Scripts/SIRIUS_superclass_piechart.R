@@ -64,7 +64,7 @@ wellcomeres_superclass_pie <- ggplot(pie_data_donut) +
     fill = NULL 
   ) +
 
-  theme_void(base_family = "Arial") + # Example font
+  theme_void(base_family = "Arial") +
   theme(
     plot.title = element_text(hjust = 0.5, face = "bold", size = 16),
     plot.subtitle = element_text(hjust = 0.5, size = 12),
@@ -80,3 +80,4 @@ wellcomeres_superclass_piechart
 
 ggsave("wellcomeres_SIRIUS_piechart.svg", plot = wellcomeres_superclass_piechart, 
        width = 10.5, height = 6, units = "in")
+
