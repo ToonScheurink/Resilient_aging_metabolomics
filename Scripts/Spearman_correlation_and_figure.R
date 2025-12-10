@@ -48,7 +48,7 @@ results_df <- results_df %>%
 
 csv_path <- file.path(out_base_dir, "spearman_all_features_summary.csv")
 write_csv(results_df, csv_path)
-message(sprintf("✅ Spearman  %s", csv_path))
+message(sprintf("Spearman  %s", csv_path))
 
 
 
@@ -120,4 +120,5 @@ print(p)
 ggsave(out_svg, p, width = 4, height = 5)
 
 p
+
 
