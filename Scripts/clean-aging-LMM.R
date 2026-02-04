@@ -214,5 +214,5 @@ estimate_weight_plot
 table<-df_merged %>%
   dplyr::select(Metabolite, Weight, Direction, Stability, estimate, p_adj)
 
-#write.csv(table, "supl_table_1.csv", row.names = FALSE)
+#write.csv(table, "supl_table_2.csv", row.names = FALSE)
 
